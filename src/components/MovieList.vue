@@ -51,19 +51,13 @@
     moviesStore.fetchMovies();
   };
   
-  watch(() => moviesStore.searchTerm, () => {
+  watch(() => moviesStore.searchQuery, () => {
     moviesStore.currentPage = 1;
     moviesStore.fetchMovies();
   });
   </script>
   
   <style scoped lang="scss">
-  .movie-list-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-  
   .search-bar {
     margin-bottom: 2rem;
   }
@@ -120,7 +114,7 @@
   
   @media (max-width: 768px) {
     .movie-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
   }
