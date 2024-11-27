@@ -1,53 +1,24 @@
 <template>
   <div id="app">
-    <header>
-      <h1>Movie Listing App</h1>
-      <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/favorites">Favorites</router-link>
-      </nav>
+    <header class="app-header">
+      <div class="header-content">
+        <h1 class="app-title">Movie Listing App</h1>
+        <nav class="app-nav">
+          <router-link to="/" class="nav-link">Home</router-link>
+          <router-link to="/favorites" class="nav-link">Favorites</router-link>
+        </nav>
+      </div>
     </header>
-    <main>
+    <main class="app-main">
       <router-view />
     </main>
+    <footer class="app-footer">
+      <p>&copy; {{ currentYear }} Movie Listing App. All rights reserved.</p>
+    </footer>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue';
+const currentYear = computed(() => new Date().getFullYear());
 </script>
-
-<style lang="scss">
-#app {
-  text-align: center;
-}
-
-header {
-  background-color: #42b983;
-  color: white;
-  padding: 1rem;
-
-  h1 {
-    margin: 0;
-  }
-
-  nav {
-    margin-top: 0.5rem;
-
-    a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-main {
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 800px;
-}
-</style>
