@@ -65,6 +65,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
   .header-content {
+    box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -102,7 +103,7 @@ body {
 // Main content styles
 .app-main {
   flex-grow: 1;
-  padding: var(--header-height) 20px var(--footer-height);
+  padding: var(--header-height) 0 var(--footer-height);
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
