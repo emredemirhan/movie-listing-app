@@ -1,14 +1,10 @@
 // Import Sass color module
 @use "sass:color";
-
 // Variables
 $primary-color: #1a1a1a;
 $secondary-color: #ffffff;
 $accent-color: #ffd700;
 $text-color: #323232;
-$header-height: 60px;
-$footer-height: 60px;
-$font-stack: 'Avenir', Helvetica, Arial, sans-serif;
 
 // Define CSS variables in :root
 :root {
@@ -24,12 +20,16 @@ $font-stack: 'Avenir', Helvetica, Arial, sans-serif;
   --text-color: #{$text-color};
   --text-color-rgb: #{color.channel($text-color, "red", $space: rgb)}, #{color.channel($text-color, "green", $space: rgb)}, #{color.channel($text-color, "blue", $space: rgb)};
   
-  --header-height: #{$header-height};
-  --footer-height: #{$footer-height};
-  --font-stack: #{$font-stack};
+  --header-height: 60px;
+  --footer-height: 60px;
+  --font-stack: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
-
+@media (max-width: 768px) {
+  :root {
+    --header-height: 100px; // Adjusted header height for smaller screens
+  }
+}
 // Mixins
 @mixin flex-center {
   display: flex;
@@ -157,4 +157,10 @@ body {
 
 .movie-grid > * {
   min-width: 0;
+}
+
+.movie-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
