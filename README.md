@@ -69,3 +69,34 @@ The application fetches movie data from the [JSON Mock API](https://jsonmock.hac
 
 - **Get Movies**: `GET https://jsonmock.hackerrank.com/api/movies/?page={page}`
 - **Search Movies**: `GET https://jsonmock.hackerrank.com/api/movies/search/?Title={title}&page={page}`
+
+## Heroku Deployment
+
+In order to deploy the application you must install the Heroku CLI first. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+```sh
+heroku login
+```
+
+Make sure to create the application on Heroku first.
+
+After that you can add the project to the Heroku remote.
+
+```sh
+heroku git:remote -a movie-listing-app
+```
+
+### Deploy your changes
+
+Make some changes to the code you just cloned and deploy them to Heroku using Git.
+
+```sh
+git add .
+git commit -am "make it better"
+git push heroku main
+```
+
+After pushing the changes, heroku gets a build and deploys the application. The Procfile file in the root of the project tells Heroku which command to run to start the application. In our case we are using the http-server package to serve the application that has a built in the dist folder. 
+
+You can view the deployed application at the link that Heroku provides after the build is complete.
