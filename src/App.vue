@@ -17,8 +17,6 @@
 </script>
 
 <style lang="scss">
-@import '@/styles/main.scss';
-
 #app {
   text-align: center;
 }
