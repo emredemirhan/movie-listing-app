@@ -50,17 +50,18 @@ To get started with the project, follow these steps:
 - **Linting**: `npm run lint` - Lints the codebase using ESLint.
 
 ## Directory Structure
+```
 src/
-├── assets/ # Contains global styles and assets
-├── components/ # Reusable Vue components
-├── mocks/ # Mock data for testing
-├── router/ # Vue Router configuration
-├── services/ # API service functions
-├── stores/ # Pinia stores for state management
-├── types/ # TypeScript type definitions
-├── views/ # Vue components for different views
-└── App.vue # Main application component
-
+├── assets/         # Contains global styles and assets
+├── components/     # Reusable Vue components
+├── mocks/          # Mock data for testing
+├── router/         # Vue Router configuration
+├── services/       # API service functions
+├── stores/         # Pinia stores for state management
+├── types/          # TypeScript type definitions
+├── views/          # Vue components for different views
+└── App.vue         # Main application component
+```
 
 ## API Integration
 
