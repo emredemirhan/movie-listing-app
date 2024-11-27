@@ -8,7 +8,7 @@ export const useMoviesStore = defineStore('movies', () => {
     const totalPages = ref(0);
     const currentPage = ref(1);
     const searchQuery = ref('');
-    const isLoading = ref(false);
+    const isLoading = ref(true);
     const error = ref<string | null>(null);
 
     const fetchMovies = async () => {
