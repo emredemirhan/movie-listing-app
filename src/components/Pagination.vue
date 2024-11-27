@@ -100,7 +100,30 @@ const showRightEllipsis = computed(() => {
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+  flex-wrap: wrap;
 
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack elements vertically on mobile
+    width: 100%;
+    gap: 1rem;
+
+    button {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .page-numbers {
+      margin: 0;
+      width: 100%;
+      justify-content: center;
+      gap: 0.5rem;
+
+      button {
+        width: 40px;
+        max-width: 40px;
+      }
+    }
+  }
 
   button {
     display: inline-flex;
